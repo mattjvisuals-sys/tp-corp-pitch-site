@@ -6,7 +6,7 @@
     <title>Tiny Pockets | Premium Corporate Event Entertainment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after {
             margin: 0;
@@ -67,9 +67,21 @@
         }
 
         .nav-logo {
-            font-family: 'Caveat', cursive;
-            font-size: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            text-decoration: none;
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--gold-dim);
+            position: relative;
+        }
+
+        .nav-logo .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.85rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
             background: linear-gradient(
                 105deg,
                 #B8943F 0%,
@@ -86,10 +98,25 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-decoration: none;
-            letter-spacing: 0.02em;
-            filter: drop-shadow(0 0 10px rgba(201, 165, 90, 0.35));
             animation: gold-shimmer 4s ease-in-out infinite;
+            line-height: 1;
+        }
+
+        .nav-logo .logo-divider {
+            width: 1px;
+            height: 1rem;
+            background: var(--gold-dim);
+            margin: 0 0.75rem;
+            opacity: 0.6;
+        }
+
+        .nav-logo .logo-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.55rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--gold-dim);
         }
 
         .nav-links {
@@ -1156,9 +1183,19 @@
         }
 
         .footer-logo {
-            font-family: 'Caveat', cursive;
-            font-size: 1.75rem;
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1.25rem;
+            border: 1px solid var(--gold-dim);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
             background: linear-gradient(
                 105deg,
                 #B8943F 0%,
@@ -1175,9 +1212,25 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            filter: drop-shadow(0 0 10px rgba(201, 165, 90, 0.35));
             animation: gold-shimmer 4s ease-in-out infinite;
-            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .footer-logo .logo-divider {
+            width: 1px;
+            height: 1rem;
+            background: var(--gold-dim);
+            margin: 0 0.75rem;
+            opacity: 0.6;
+        }
+
+        .footer-logo .logo-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.55rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--gold-dim);
         }
 
         .footer-text {
@@ -1367,7 +1420,11 @@
 
 <!-- ─── NAV ─── -->
 <nav>
-    <a href="#" class="nav-logo">Tiny Pockets</a>
+    <a href="#" class="nav-logo">
+        <span class="logo-text">Tiny Pockets</span>
+        <span class="logo-divider"></span>
+        <span class="logo-sub">Music</span>
+    </a>
     <ul class="nav-links">
         <li><a href="#packages">Packages</a></li>
         <li><a href="#songs">Song List</a></li>
@@ -1788,7 +1845,11 @@
 
 <!-- ─── FOOTER ─── -->
 <footer>
-    <div class="footer-logo">Tiny Pockets</div>
+    <div class="footer-logo">
+        <span class="logo-text">Tiny Pockets</span>
+        <span class="logo-divider"></span>
+        <span class="logo-sub">Music</span>
+    </div>
     <p class="footer-text">Premium live entertainment for corporate events that matter.</p>
 </footer>
 

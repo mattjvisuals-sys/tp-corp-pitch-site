@@ -1,47 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 130">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 60">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@500&amp;display=swap');
     </style>
-    <filter id="gold-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0.75 0 0 0 0  0.25 0 0 0 0  0 0 0 0.35 0" result="glow"/>
-      <feMerge>
-        <feMergeNode in="glow"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#B8943F"/>
       <stop offset="25%" style="stop-color:#C9A55A"/>
       <stop offset="50%" style="stop-color:#F5ECCE"/>
       <stop offset="75%" style="stop-color:#D4B96E"/>
       <stop offset="100%" style="stop-color:#B8943F"/>
     </linearGradient>
-    <linearGradient id="gold-underline" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#C9A55A;stop-opacity:0"/>
-      <stop offset="30%" style="stop-color:#D4B96E"/>
-      <stop offset="70%" style="stop-color:#C9A55A"/>
-      <stop offset="100%" style="stop-color:#B8943F;stop-opacity:0"/>
-    </linearGradient>
   </defs>
 
-  <!-- TINY -->
-  <text x="210" y="52" text-anchor="middle"
-        font-family="'Caveat', cursive"
-        font-size="58" font-weight="700"
-        fill="url(#gold-gradient)" filter="url(#gold-glow)"
-        letter-spacing="6">Tiny</text>
+  <!-- Border frame -->
+  <rect x="1" y="1" width="478" height="58" rx="0" ry="0"
+        fill="none" stroke="#8a7340" stroke-width="1"/>
 
-  <!-- POCKETS -->
-  <text x="210" y="108" text-anchor="middle"
-        font-family="'Caveat', cursive"
-        font-size="58" font-weight="700"
-        fill="url(#gold-gradient)" filter="url(#gold-glow)"
-        letter-spacing="4">Pockets</text>
+  <!-- TINY POCKETS -->
+  <text x="200" y="38" text-anchor="middle"
+        font-family="'Playfair Display', serif"
+        font-size="18" font-weight="700"
+        letter-spacing="6"
+        fill="url(#gold-gradient)">TINY POCKETS</text>
 
-  <!-- Subtle underline flourish -->
-  <path d="M 110 115 Q 170 122 210 117 Q 250 112 310 119"
-        stroke="url(#gold-underline)" stroke-width="1.5" fill="none"
-        stroke-linecap="round"/>
+  <!-- Divider line -->
+  <line x1="370" y1="16" x2="370" y2="44" stroke="#8a7340" stroke-width="1" opacity="0.6"/>
+
+  <!-- MUSIC -->
+  <text x="420" y="36" text-anchor="middle"
+        font-family="'Inter', sans-serif"
+        font-size="10" font-weight="500"
+        letter-spacing="4"
+        fill="#8a7340">MUSIC</text>
 </svg>
