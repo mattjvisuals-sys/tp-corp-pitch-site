@@ -628,7 +628,7 @@
 
         .packages-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
         }
 
@@ -648,6 +648,65 @@
         .package-card.featured {
             border-color: var(--gold);
             background: linear-gradient(165deg, var(--deep-purple), var(--dark-surface));
+        }
+
+        /* ─── 80s Experience card ─── */
+        .package-card.eighties {
+            border-color: #ff2d95;
+            background: linear-gradient(165deg, #1a0a1e, #120818);
+            overflow: hidden;
+        }
+
+        .package-card.eighties:hover {
+            border-color: #ff6db5;
+        }
+
+        .package-card.eighties .package-tagline {
+            color: #ff2d95;
+        }
+
+        .package-card.eighties .package-features li::before {
+            color: #ff2d95;
+        }
+
+        .package-card.eighties .package-cta {
+            border-color: #ff2d95;
+            color: #ff2d95;
+        }
+
+        .package-card.eighties .package-cta:hover {
+            background: #ff2d95;
+            color: #000;
+        }
+
+        .eighties-logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .eighties-logo .eighties-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            background: linear-gradient(135deg, #ff2d95, #ff6db5, #ffb3d9, #ff6db5, #ff2d95);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            filter: drop-shadow(0 0 12px rgba(255, 45, 149, 0.4));
+        }
+
+        .eighties-logo .eighties-powered {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--gold-dim);
+            margin-top: 0.4rem;
+        }
+
+        .eighties-logo .eighties-powered span {
+            color: var(--gold);
         }
 
         .package-badge {
@@ -1254,8 +1313,8 @@
         /* ─── RESPONSIVE ─── */
         @media (max-width: 1024px) {
             .packages-grid {
-                grid-template-columns: 1fr;
-                max-width: 500px;
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 700px;
                 margin: 0 auto;
             }
 
@@ -1388,6 +1447,11 @@
 
             .form-row {
                 grid-template-columns: 1fr;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
             }
 
             .cinematic-banner {
@@ -1564,17 +1628,17 @@
     <div class="section-inner">
         <div class="packages-header fade-up">
             <p class="section-label">Packages</p>
-            <h2 class="section-heading">Flexible options. Zero guesswork.</h2>
+            <h2 class="section-heading">Built for corporate events. Tailored to yours.</h2>
             <p class="section-desc">Every package includes professional sound, seamless setup, and a band that shows up early, dressed sharp, and ready to deliver.</p>
         </div>
         <div class="packages-grid">
             <div class="package-card fade-up">
                 <div class="package-name">Cocktail Hour</div>
-                <div class="package-tagline">Sophisticated & smooth</div>
+                <div class="package-tagline">Set the tone from the first handshake</div>
                 <ul class="package-features">
                     <li>2 hours of live performance</li>
                     <li>Jazz, soul & lounge repertoire</li>
-                    <li>Ambient volume control</li>
+                    <li>Ambient volume for networking</li>
                     <li>Professional PA included</li>
                     <li>Custom song requests welcome</li>
                 </ul>
@@ -1582,11 +1646,11 @@
             </div>
             <div class="package-card featured fade-up">
                 <div class="package-badge">Most Popular</div>
-                <div class="package-name">Full Reception</div>
-                <div class="package-tagline">The complete experience</div>
+                <div class="package-name">The Main Event</div>
+                <div class="package-tagline">Peak energy. Packed dance floor.</div>
                 <ul class="package-features">
                     <li>3 hours of live performance</li>
-                    <li>Cocktail to dance floor transition</li>
+                    <li>High-energy party & dance sets</li>
                     <li>DJ sets between live sets</li>
                     <li>Full PA & lighting rig</li>
                     <li>MC & announcement support</li>
@@ -1595,15 +1659,30 @@
                 <a href="#contact" class="package-cta">Enquire Now</a>
             </div>
             <div class="package-card fade-up">
-                <div class="package-name">All-Night</div>
-                <div class="package-tagline">From first drink to last dance</div>
+                <div class="package-name">The Full Night</div>
+                <div class="package-tagline">Arrivals through after-party</div>
                 <ul class="package-features">
                     <li>5 hours of live performance</li>
-                    <li>Full event music management</li>
+                    <li>Cocktail hour to dance floor flow</li>
                     <li>DJ sets & live band rotation</li>
                     <li>Premium PA & lighting</li>
                     <li>Dedicated event coordinator</li>
                     <li>Overtime available on request</li>
+                </ul>
+                <a href="#contact" class="package-cta">Enquire Now</a>
+            </div>
+            <div class="package-card eighties fade-up">
+                <div class="eighties-logo">
+                    <div class="eighties-title">The 80s<br>Experience</div>
+                    <div class="eighties-powered">powered by <span>Tiny Pockets Music</span></div>
+                </div>
+                <div class="package-tagline">Neon lights. Big hair. Bigger energy.</div>
+                <ul class="package-features">
+                    <li>Full themed 80s rock show</li>
+                    <li>Authentic 80s costumes & styling</li>
+                    <li>Classic hits — Journey, Bowie, Prince & more</li>
+                    <li>Full PA, lighting & effects</li>
+                    <li>Available as standalone or add-on</li>
                 </ul>
                 <a href="#contact" class="package-cta">Enquire Now</a>
             </div>
