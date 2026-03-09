@@ -380,6 +380,105 @@
             font-weight: 500;
         }
 
+        /* ─── MEET THE BAND ─── */
+        .meet-band {
+            background: var(--black);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .meet-band-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
+        }
+
+        .meet-band-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .meet-band-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        .meet-band-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent 70%, var(--black) 100%);
+        }
+
+        .meet-band-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5rem 4rem;
+        }
+
+        .meet-band-text .section-desc {
+            margin-bottom: 1.5rem;
+        }
+
+        .meet-band-text .section-heading {
+            max-width: 400px;
+        }
+
+        .meet-band-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .meet-band-detail-item {
+            border-left: 2px solid var(--gold-dim);
+            padding-left: 1rem;
+        }
+
+        .meet-band-detail-item .detail-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+        }
+
+        .meet-band-detail-item .detail-text {
+            font-size: 0.9rem;
+            color: var(--white-muted);
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .meet-band-inner {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .meet-band-image {
+                height: 350px;
+            }
+
+            .meet-band-image::after {
+                background: linear-gradient(180deg, transparent 60%, var(--black) 100%);
+            }
+
+            .meet-band-text {
+                padding: 2.5rem 1.5rem 4rem;
+            }
+
+            .meet-band-detail {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ─── PHOTO TICKER ─── */
         .photo-ticker {
             background: var(--black);
@@ -1299,6 +1398,38 @@
     </div>
 </div>
 
+<!-- ─── MEET THE BAND ─── -->
+<div class="meet-band">
+    <div class="meet-band-inner">
+        <div class="meet-band-image">
+            <img src="IMG_1668_web.webp" alt="Tiny Pockets band group photo" loading="lazy">
+        </div>
+        <div class="meet-band-text fade-up">
+            <p class="section-label">Meet the Band</p>
+            <h2 class="section-heading">Four musicians who take your event personally.</h2>
+            <p class="section-desc">We're not a faceless roster act. Tiny Pockets is a tight-knit four-piece who've played together for years, and we bring that chemistry to every stage. When you book us, you get us - the same lineup, every time.</p>
+            <div class="meet-band-detail">
+                <div class="meet-band-detail-item">
+                    <div class="detail-title">Lineup</div>
+                    <div class="detail-text">Vocals, Guitar, Saxophone & Keys, Drums</div>
+                </div>
+                <div class="meet-band-detail-item">
+                    <div class="detail-title">Experience</div>
+                    <div class="detail-text">Conservatory-trained musicians with 10+ years performing live</div>
+                </div>
+                <div class="meet-band-detail-item">
+                    <div class="detail-title">Style</div>
+                    <div class="detail-text">High-energy soul, funk, pop & jazz - tailored to your crowd</div>
+                </div>
+                <div class="meet-band-detail-item">
+                    <div class="detail-title">Promise</div>
+                    <div class="detail-text">Same lineup every booking. No surprises, no subs.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- ─── SCROLLING PHOTO TICKER ─── -->
 <div class="photo-ticker">
     <div class="ticker-track">
@@ -1465,7 +1596,7 @@
         <div class="bento-item"><img src="live-11.webp" alt="Guitarist with neon and drums" loading="lazy"></div>
         <!-- Row 2: portrait promo + wide live + portrait promo -->
         <div class="bento-item"><img src="IMG_1726_web.webp" alt="Tiny Pockets saxophonist" loading="lazy"></div>
-        <div class="bento-item"><img src="IMG_1668_web.webp" alt="Tiny Pockets group portrait" loading="lazy"></div>
+        <div class="bento-item"><img src="live-12.webp" alt="Tiny Pockets band performing together" loading="lazy"></div>
         <div class="bento-item"><img src="IMG_1762_web.webp" alt="Tiny Pockets drummer" loading="lazy"></div>
         <!-- Row 3: 4 landscape live shots -->
         <div class="bento-item"><img src="live-07.webp" alt="Saxophonist at mic" loading="lazy"></div>
